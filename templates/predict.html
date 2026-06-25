@@ -1,0 +1,80 @@
+<div style="background:black;padding:15px;">
+    <a href="/" style="color:white;margin-right:20px;">Home</a>
+
+    <a href="/dashboard" style="color:white;margin-right:20px;">
+        Dashboard
+    </a>
+
+    <a href="/view_properties" style="color:white;margin-right:20px;">
+        Properties
+    </a>
+
+    <a href="/search" style="color:white;margin-right:20px;">
+        Search
+    </a>
+
+    <a href="/predict" style="color:white;margin-right:20px;">
+        Rent Prediction
+    </a>
+
+    <a href="/rent_chart" style="color:white;margin-right:20px;">
+        Analytics
+    </a>
+
+    <a href="/logout" style="color:white;">
+        Logout
+    </a>
+</div>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rent Prediction</title>
+</head>
+<body>
+
+<h2>Predict House Rent</h2>
+
+<form method="POST">
+
+Location
+
+<select name="location">
+<option>Chennai</option>
+<option>Bangalore</option>
+<option>Hyderabad</option>
+</select>
+
+<br><br>
+
+BHK
+
+<input type="number"
+name="bhk"
+required>
+
+<br><br>
+
+Area
+
+<input type="number"
+name="area"
+required>
+
+<br><br>
+
+Furnished
+
+<select name="furnished">
+<option value="1">Yes</option>
+<option value="0">No</option>
+</select>
+
+<br><br>
+
+<input type="submit"
+value="Predict Rent">
+
+</form>
+
+</body>
+</html>

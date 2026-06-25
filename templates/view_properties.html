@@ -1,0 +1,141 @@
+<div style="background:black;padding:15px;">
+    <a href="/" style="color:white;margin-right:20px;">Home</a>
+
+    <a href="/dashboard" style="color:white;margin-right:20px;">
+        Dashboard
+    </a>
+
+    <a href="/view_properties" style="color:white;margin-right:20px;">
+        Properties
+    </a>
+
+    <a href="/search" style="color:white;margin-right:20px;">
+        Search
+    </a>
+
+    <a href="/predict" style="color:white;margin-right:20px;">
+        Rent Prediction
+    </a>
+
+    <a href="/rent_chart" style="color:white;margin-right:20px;">
+        Analytics
+    </a>
+
+    <a href="/logout" style="color:white;">
+        Logout
+    </a>
+</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Properties</title>
+
+<style>
+    
+button{
+    background:#4CAF50;
+    color:white;
+    border:none;
+    padding:8px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#45a049;
+}
+table{
+    width:90%;
+    margin:auto;
+    border-collapse:collapse;
+}
+
+th{
+    background:#4CAF50;
+    color:white;
+}
+
+td,th{
+    padding:10px;
+    text-align:center;
+    border:1px solid black;
+}
+
+</style>
+
+</head>
+<body>
+    <h1 align="center">
+    Available Properties
+    </h1>
+
+<a href="/search">Search Property</a>
+
+<br><br>
+<table border="1">
+
+<tr>
+    <th>ID</th>
+    <th>Owner</th>
+    <th>Location</th>
+    <th>BHK</th>
+    <th>Area</th>
+    <th>Rent</th>
+    <th>Furnished</th>
+    <th>Actions</th>
+    <th>Image</th>
+</tr>
+
+{% for p in properties %}
+
+<tr>
+
+<td>{{p[0]}}</td>
+<td>{{p[1]}}</td>
+<td>{{p[2]}}</td>
+<td>{{p[3]}}</td>
+<td>{{p[4]}}</td>
+<td>{{p[5]}}</td>
+<td>{{p[6]}}</td>
+<td>
+<img
+src="{{ url_for('static', filename='uploads/' + p[7]) }}"
+width="150"
+height="100">
+</td>
+<td>
+<a href="/property/{{p[0]}}" class="btn">View Details</a>
+<a href="/edit_property/{{p[0]}}">
+<button>Edit</button>
+</a>
+
+<br><br>
+
+<a href="/delete_property/{{p[0]}}">
+<button>Delete</button>
+</a>
+
+<br><br>
+
+<a href="/rate/{{p[0]}}">
+<button>Rate</button>
+</a>
+
+<br><br>
+
+<a href="/reviews/{{p[0]}}">
+<button>Reviews</button>
+</a>
+<a href="/enquiry/{{p[0]}}">Enquiry</a>
+
+<a href="/book/{{p[0]}}">Book Now</a>
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>

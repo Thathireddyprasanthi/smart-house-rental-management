@@ -1,0 +1,79 @@
+<div style="background:black;padding:15px;">
+    <a href="/" style="color:white;margin-right:20px;">Home</a>
+
+    <a href="/dashboard" style="color:white;margin-right:20px;">
+        Dashboard
+    </a>
+
+    <a href="/view_properties" style="color:white;margin-right:20px;">
+        Properties
+    </a>
+
+    <a href="/search" style="color:white;margin-right:20px;">
+        Search
+    </a>
+
+    <a href="/predict" style="color:white;margin-right:20px;">
+        Rent Prediction
+    </a>
+
+    <a href="/rent_chart" style="color:white;margin-right:20px;">
+        Analytics
+    </a>
+
+    <a href="/logout" style="color:white;">
+        Logout
+    </a>
+</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Property</title>
+</head>
+<body>
+
+<h2>Add Property</h2>
+
+<form method="POST" enctype="multipart/form-data">
+
+    Owner Name:
+    <input type="text" name="owner_name" required>
+    <br><br>
+
+    Location:
+    <input type="text" name="location" required>
+    <br><br>
+
+    BHK:
+    <input type="number" name="bhk" required>
+    <br><br>
+
+    Area (sqft):
+    <input type="number" name="area" required>
+    <br><br>
+
+    Rent:
+    <input type="number" name="rent" required>
+    <br><br>
+
+    Furnished:
+    <select name="furnished">
+        <option>Yes</option>
+        <option>No</option>
+    </select>
+Property Image
+
+<input type="file" name="image">
+
+<br><br>
+    <br><br>
+
+    <input type="submit" value="Add Property">
+
+</form>
+
+<br>
+<a href="/dashboard">Dashboard</a>
+
+</body>
+</html>

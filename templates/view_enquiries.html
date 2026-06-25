@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Enquiries</title>
+</head>
+<body>
+
+<h2>Property Enquiries</h2>
+
+<table border="1">
+
+<tr>
+    <th>ID</th>
+    <th>Owner</th>
+    <th>Location</th>
+    <th>Message</th>
+</tr>
+
+{% for e in enquiries %}
+
+<tr>
+    <td>{{e[0]}}</td>
+    <td>{{e[1]}}</td>
+    <td>{{e[2]}}</td>
+    <td>{{e[3]}}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>

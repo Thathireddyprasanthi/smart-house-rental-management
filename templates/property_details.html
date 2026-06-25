@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Property Details</title>
+</head>
+<body>
+
+<h1>Property Details</h1>
+
+<img src="{{ url_for('static',
+filename='uploads/' + property[7]) }}"
+width="500">
+<h3>
+⭐ Average Rating:
+{{ property[8] if property[8] else 'No Ratings Yet' }}
+</h3>
+<h3>Owner : {{property[1]}}</h3>
+<h3>Location : {{property[2]}}</h3>
+<h3>BHK : {{property[3]}}</h3>
+<h3>Area : {{property[4]}}</h3>
+<h3>Rent : {{property[5]}}</h3>
+<h3>Furnished : {{property[6]}}</h3>
+
+</body>
+</html>

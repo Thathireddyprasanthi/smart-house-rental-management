@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bookings</title>
+</head>
+<body>
+
+<h2>Booking Requests</h2>
+
+<table border="1">
+
+<tr>
+    <th>Booking ID</th>
+    <th>Property ID</th>
+    <th>User ID</th>
+    <th>Status</th>
+</tr>
+
+{% for b in bookings %}
+
+<tr>
+    <td>{{b[0]}}</td>
+    <td>{{b[1]}}</td>
+    <td>{{b[2]}}</td>
+    <td>{{b[3]}}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>

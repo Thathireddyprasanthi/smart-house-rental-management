@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+property_report.pdf
+static/charts/*.png
